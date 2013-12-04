@@ -60,7 +60,7 @@ describe('rendering React components at document', function() {
     React.renderComponentToString(<Root />, function(markup) {
       testDocument.innerHTML = markup;
       var component = React.renderComponent(<Root />, testDocument);
-      expect(testDocument.body.innerHTML).toBe(' Hello world ');
+      expect(testDocument.body.innerHTML).toBe('Hello world');
 
       var componentID = ReactMount.getReactRootID(testDocument);
       expect(componentID).toBe(component._rootNodeID);
@@ -88,7 +88,7 @@ describe('rendering React components at document', function() {
     React.renderComponentToString(<Root />, function(markup) {
       testDocument.innerHTML = markup;
       React.renderComponent(<Root />, testDocument);
-      expect(testDocument.body.innerHTML).toBe(' Hello world ');
+      expect(testDocument.body.innerHTML).toBe('Hello world');
 
       expect(function() {
         React.unmountComponentAtNode(testDocument);

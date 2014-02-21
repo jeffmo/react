@@ -1,17 +1,18 @@
 'use strict';
 
-var exec = require('child_process').exec;
-var jsxTask = require('./grunt/tasks/jsx');
 var browserifyTask = require('./grunt/tasks/browserify');
-var populistTask = require('./grunt/tasks/populist');
-var webdriverPhantomJSTask = require('./grunt/tasks/webdriver-phantomjs');
-var webdriverJasmineTasks = require('./grunt/tasks/webdriver-jasmine');
-var sauceTunnelTask = require('./grunt/tasks/sauce-tunnel');
-var npmTask = require('./grunt/tasks/npm');
-var releaseTasks = require('./grunt/tasks/release');
+var exec = require('child_process').exec;
+var jestTask = require('./grunt/tasks/jest');
+var jsxTask = require('./grunt/tasks/jsx');
 var npmReactTasks = require('./grunt/tasks/npm-react');
 var npmReactToolsTasks = require('./grunt/tasks/npm-react-tools');
+var npmTask = require('./grunt/tasks/npm');
+var populistTask = require('./grunt/tasks/populist');
+var releaseTasks = require('./grunt/tasks/release');
+var sauceTunnelTask = require('./grunt/tasks/sauce-tunnel');
 var versionCheckTask = require('./grunt/tasks/version-check');
+var webdriverJasmineTasks = require('./grunt/tasks/webdriver-jasmine');
+var webdriverPhantomJSTask = require('./grunt/tasks/webdriver-phantomjs');
 
 module.exports = function(grunt) {
 
@@ -242,4 +243,6 @@ module.exports = function(grunt) {
 
   // The default task - build - to keep setup easy
   grunt.registerTask('default', ['build']);
+
+  grunt.registerTask('jest', jestTask);
 };

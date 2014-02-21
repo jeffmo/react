@@ -1,0 +1,12 @@
+{
+  "projectName": "react",
+  "rootDir": "../../",
+  "setupEnvScriptFile": "<rootDir>/vendor/jest/setupEnv.js",
+  "scriptPreprocessor": "<rootDir>/vendor/jest/preprocess.js",
+  "testPathDirs": [
+    "<rootDir>/src/"
+  ],
+  "unmockList": [
+    "<rootDir>/src/"
+  ]
+}

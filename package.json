@@ -54,6 +54,7 @@
     "grunt-contrib-jshint": "~0.8.0",
     "gzip-js": "~0.3.2",
     "jasmine-tapreporter": "~0.2.2",
+    "jest-cli": "^0.1.6",
     "lodash": "~2.4.1",
     "microtime": "~0.5.1",
     "optimist": "~0.6.0",
@@ -78,5 +79,14 @@
   "scripts": {
     "test": "grunt test",
     "jest": "grunt jest"
+  },
+  "jest": {
+    "testPathDirs": [
+      "src",
+      "vendor"
+    ],
+    "unmockedModulePathPatterns": ["<rootDir>"],
+    "setupEnvScriptFile": "<rootDir>/jestSetupEnv.js",
+    "scriptPreprocessor": "<rootDir>/jestPreprocessor.js"
   }
 }
